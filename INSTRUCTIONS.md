@@ -46,7 +46,7 @@ We will collect one response to each topic from each of the models. The models a
 
 You can gather responses with OpenRouter; the key is in .env. Store all the responses in a responses.json with information about the model and question asked.
 
-**Script:** `responses.py` → outputs `responses.json`
+**Script:** `gather_responses.py` → outputs `responses.json`
 
 ---
 
@@ -74,7 +74,7 @@ In the prompt to the judge, also include a brief description of what each techni
 
 Parse the response and store the results in arguments.json.
 
-**Script:** `classify.py` → outputs `arguments.json`
+**Script:** `classify_arguments.py` → outputs `arguments.json`
 
 ---
 
@@ -89,7 +89,7 @@ Score each argument using a composite metric (0–10) with three weighted compon
 
 Skip entries that are refusals or errors. Store emotional intensity (subjectivity + polarity) as additional metadata.
 
-**Script:** `newScoring.py` → outputs `scored2.json`
+**Script:** `newClassifyingTest.py` → outputs `scored2.json`
 
 ---
 
@@ -99,7 +99,7 @@ Pick the best 5 questions to show to human respondents. Selection criteria:
 2. Prefer questions where all 3 models responded (no refusals)
 3. Among eligible questions, pick the one with the highest variance in composite score across models — high variance means models disagreed, which is more interesting for humans to judge
 
-**Script:** `pickQuestions.py` → outputs `survey_questions.json`
+**Script:** `pick_survey_questions.py` → outputs `survey_questions.json`
 
 ---
 
@@ -108,7 +108,7 @@ Present the selected questions to human respondents. For each question, show the
 - Which response was most convincing? (pick 1, 2, or 3)
 - How confident are you in that choice? (1–10)
 
-Store results in `survey_responses.json`.
+Store results in a google sheet or excel document.
 
 ---
 
@@ -118,18 +118,10 @@ Aggregate all results across models, categories, and techniques. Produce:
 - Technique usage frequency per model and per category
 - Average composite score per model
 - Correlation between each technique and composite score (avg score with vs. without)
-- Human survey results: most convincing model per question, average confidence score
 
-**Script:** `analysis.py` → outputs `analysis.json` and `technique_analysis.json`
+**Script:** `analyze_techniques.py` → outputs `analysis.json`
 
 ---
 
-## PHASE 7: Plotting
-Create visualisations from the analysis output:
-
-- Radar chart of technique usage by model
-- Bar chart of score difference per technique (with vs. without)
-- Grouped bar chart of technique usage by category
-- Summary table of human survey results with confidence scores
-
-**Script:** `plot.py` → outputs charts to `/plots`
+## PHASE 7: Compare
+Take a look at the results from the Human survey and compare them with how Gemini or another LLM model scored them. 

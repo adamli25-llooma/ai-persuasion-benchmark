@@ -53,7 +53,7 @@ pickQuestions.py   →   survey_questions.json
        ↓
                    [human survey]
        ↓
-analysis.py        →   analysis.json / technique_analysis.json
+analysis.py        →   analysis.json
 ```
 
 ### Scripts
