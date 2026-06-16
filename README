@@ -43,17 +43,17 @@ Based on Aristotle's rhetorical appeals and Cialdini's principles of influence:
 ## Pipeline
 
 ```
-responses.py       →   responses.json
+gather_responses.py       →   responses.json
        ↓
-classify.py        →   arguments.json
+classify_arguments.py        →   arguments.json
        ↓
-newScoring.py      →   scored2.json
+newClassifyingTest.py      →   scored2.json
        ↓
-pickQuestions.py   →   survey_questions.json
+pick_survey_questions.py   →   survey_questions.json
        ↓
                    [human survey]
        ↓
-analysis.py        →   analysis.json
+analyze_techniques.py        →   analysis.json
 ```
 
 ### Scripts
