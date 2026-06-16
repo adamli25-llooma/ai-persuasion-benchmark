@@ -1,3 +1,6 @@
+# Gather responses from the LLM models on the survey questions
+# Results saved to responses.json
+
 import json
 import os
 import time

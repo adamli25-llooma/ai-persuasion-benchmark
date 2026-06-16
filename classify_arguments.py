@@ -1,3 +1,6 @@
+# Classify the arguments into techniques and persuasiveness
+# Results saved to arguments.json
+
 import json
 import os
 import re

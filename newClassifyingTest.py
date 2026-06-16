@@ -1,4 +1,6 @@
-# new classifying file
+# New classifying test to score the arguments, scored based on rubric of techniques, readability, and emotional intensity
+# Results saved to scored2.json
+
 import json
 from pathlib import Path
 

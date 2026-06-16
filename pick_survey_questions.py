@@ -1,3 +1,6 @@
+# Pick the best survey questions to judge
+# Results saved to survey_questions.json
+
 import json
 from pathlib import Path
 from collections import defaultdict

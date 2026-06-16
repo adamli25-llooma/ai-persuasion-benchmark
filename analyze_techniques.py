@@ -1,3 +1,6 @@
+# Analysis of the techniques used by the LLM models on the survey questions
+# Results saved to analysis.json
+
 import json
 from pathlib import Path
 from collections import defaultdict
