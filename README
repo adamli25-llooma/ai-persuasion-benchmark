@@ -1,0 +1,14 @@
+README:
+
+Edited gather_responses.py by adding system prompt to generate more useful responses
+Used new classifying test to make scored.json
+used newScoring to generate scored2.json
+
+Not sure which one is better, scored2 has more variety in scores
+Both follow similar scoring patterns. (using rubric of techniques, readbility, emotional intent etc)
+
+Next steps is to sort through and find the best responses to judge 
+And also maybe to see what model was best (and why?)
+    like what did it do particularly well
+
+maybe we can ask an AI later and see what it thinks and why it did something in a particular way
