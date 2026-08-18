@@ -124,4 +124,3 @@ Across three frontier models, persuasiveness — as judged by both a computation
 
 ---
 
-*This study was completed as part of the Tufts AI Safety (TASSA) Technical Fellowship. Full pipeline and code available on request.*
